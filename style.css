@@ -1,0 +1,220 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+@import url(http://fonts.googleapis.com/css?family=Lily+Script+One);
+
+/* basic elements */
+html, body {
+	margin: 0;
+	padding: 0;
+	min-width: 100%;
+	min-height: 100%;
+}
+
+body { 
+	font: 14px arial, sans-serif;
+	line-height: 1.5;
+	color: #171C1F; 
+	background-color: #74D5FF; 
+	background: -webkit-linear-gradient(top, rgba(116, 213, 255, 0.75) 15%, rgba(192, 236, 255, 0.7) 60%, rgba(255, 255, 255, 0.5) 90%) fixed, 
+							url('bg.jpg') fixed;
+	background-size: cover;
+}
+
+a:link, a:hover, a:active, a:visited {
+	color: #5CAACC;
+}
+
+div {
+	position: relative;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+h1, h2, h3 {
+	font-family: 'Lily Script One', cursive;
+}
+
+h1 {
+	font-size: 2em;
+	line-height: 1em;
+}
+
+h2 {
+	line-height: 1em;
+}
+
+h3 {
+	font-size: 2.5em;
+	line-height: 1em;
+}
+
+/* specific elements */
+
+.intro, .main.supporting {
+	max-width: 1024px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.summary, .preamble, .explanation, .participation, .benefits, .requirements,
+.design-archives .viewall, footer, .design-selection li {
+	background-color: white;
+	max-width: 100%;
+}
+
+.summary, .preamble, .explanation, .participation, .benefits, .requirements {
+	padding: 3em 4em 2em 4em;
+	border-radius: 50% 50% 25% 25%;
+}
+
+.design-archives .viewall, .design-selection li {
+	padding: 28px;
+	border-radius: 50%;
+}
+
+.preamble > h3, .explanation > h3, .participation > h3, .benefits > h3, .requirements > h3 {
+	text-align: center;
+}
+
+.intro > header {
+	display: block;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 28px;
+
+	text-align: center;
+	
+	width: 300px;
+	height: 300px;
+	padding: 50px 0 0 0;
+	box-sizing: border-box;
+	border-radius: 50%;
+
+	background-color: #FFD952;
+	z-index: 1;
+}
+
+.summary {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -130px;
+
+	width: 500px;
+	text-align: center;
+	z-index: 2;
+}
+
+.preamble {
+	margin-top: 28px;
+	margin-left: 2%;
+	width: 625px;
+	z-index: 3;
+}
+
+.explanation {
+	margin-right: 28px;
+	margin-left: auto;
+	margin-top: -150px;
+	width: 460px;
+	z-index: 4;
+}
+
+.participation {
+	margin-left: 75px;
+	margin-top: 50px;
+	width: 750px;
+	z-index: 5;
+}
+
+.benefits {
+	margin-top: 75px;
+	margin-left: 150px;
+	width: 400px;
+	z-index: 6;
+}
+
+.requirements {
+	margin-left: 300px;
+	margin-top: -50px;
+
+	width: 700px;
+}
+
+footer {
+	position: fixed;
+	top: 0;
+	right: 0;
+
+	display: block;
+	box-sizing: border-box;
+	border-radius: 0 0 0 100%;
+	padding: 0.5em 0.5em 1.5em 2em;
+
+	background-color: white;
+
+	text-align: right;
+}
+
+.sidebar ul {
+	list-style: none;
+}
+
+.design-selection {
+	padding: 28px;
+
+	text-align: center;
+}
+
+.design-selection li {
+	margin: 1em;
+	display: inline-block;
+}
+
+.design-archives .archives,
+.design-archives .next {
+	display: none;
+}
+
+.design-archives .viewall {
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+
+	text-align: center;
+	font-size: 2em;
+	font-family: 'Lily Script One', cursive;
+}
+
+.zen-resources {
+	margin-top: 5em;
+}
+
+.zen-resources > .resources {
+	display: none;
+}
+
+.zen-resources ul {
+	left: 0;
+	right: 0;
+	padding: 28px;
+	margin: 0;
+
+	background-color: #C0ECFF;
+}
+
+.zen-resources li {
+	display: inline-block;
+	color: #5CAACC;
+}
+
+.zen-resources li:before {
+	content: '(';
+}
+
+.zen-resources li:after {
+	content: ')';
+}
