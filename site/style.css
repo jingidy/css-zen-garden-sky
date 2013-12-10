@@ -22,7 +22,21 @@ body {
 }
 
 a:link, a:hover, a:active, a:visited {
+	display: inline-block;
 	color: #5CAACC;
+	font-weight: bold;
+	text-decoration: none;
+	-webkit-transition: 0.25s ease-in-out;
+	-webkit-transition-property: color;
+	-webkit-transition-delay: 0.1s;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #171C1F;
+	-webkit-transition-delay: 0s;
+	-webkit-transition-duration: 0.1s;
+	-webkit-trasition-easing-function: ease-out;
 }
 
 div {
@@ -32,16 +46,12 @@ div {
 	margin: 0;
 }
 
-h1, h2, h3 {
+h1, h3 {
 	font-family: 'Lily Script One', cursive;
 }
 
 h1 {
 	font-size: 2em;
-	line-height: 1em;
-}
-
-h2 {
 	line-height: 1em;
 }
 
@@ -58,20 +68,43 @@ h3 {
 	margin-right: auto;
 }
 
+.intro p a,
+.main.supporting p a {
+	padding: 0.25em 0.3em 0.25em 0.3em;
+	margin: -0.25em -0.3em -0.25em -0.3em;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0);
+	
+	color: #5CAACC;
+	font-weight: bold;
+	text-decoration: none;
+
+	-webkit-transition: 0.25s ease-out;
+	-webkit-transition-property: border-radius, color, background-color;
+}
+
+.intro p a:hover,
+.main.supporting p a:hover {
+	border-radius: 1em;
+	background-color: #5CAACC;
+
+	color: white;
+	-webkit-transform: none;
+}
+
 .summary, .preamble, .explanation, .participation, .benefits, .requirements,
-.design-archives .viewall, footer, .design-selection li {
-	background-color: white;
-	max-width: 100%;
+.design-archives .viewall a, footer, .design-selection li {
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center;
 }
 
 .summary, .preamble, .explanation, .participation, .benefits, .requirements {
 	padding: 3em 4em 2em 4em;
-	border-radius: 50% 50% 25% 25%;
 }
 
-.design-archives .viewall, .design-selection li {
+.design-archives .viewall a, .design-selection li {
 	padding: 28px;
-	border-radius: 50%;
 }
 
 .preamble > h3, .explanation > h3, .participation > h3, .benefits > h3, .requirements > h3 {
@@ -81,11 +114,13 @@ h3 {
 .intro > header {
 	display: block;
 	position: relative;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 300px;
 	margin-top: 28px;
 
 	text-align: center;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
 	
 	width: 300px;
 	height: 300px;
@@ -97,66 +132,129 @@ h3 {
 	z-index: 1;
 }
 
+.intro > header > h2 {
+	font-family: arial, sans-serif;
+	line-height: 1em;
+	font-size: 1em;
+	margin-top: -10px;
+}
+
 .summary {
 	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: -130px;
+	margin-left: 350px;
+	margin-top: -200px;
 
-	width: 500px;
-	text-align: center;
 	z-index: 2;
+
+	width: 571px;
+	height: 276px;
+	padding: 100px 70px 0 70px;
+	box-sizing: border-box;
+	background-image: url('cloud_08.png');
 }
 
 .preamble {
 	margin-top: 28px;
-	margin-left: 2%;
-	width: 625px;
+	margin-left: 0;
 	z-index: 3;
+
+	width: 818px;
+	min-height: 495px;
+	padding: 120px 130px 100px 150px;
+	background-image: url('cloud_05.png');
+}
+
+.preamble > h3 {
+	text-indent: 50px
 }
 
 .explanation {
-	margin-right: 28px;
+	margin-right: 0;
 	margin-left: auto;
-	margin-top: -150px;
-	width: 460px;
+	margin-top: -130px;
 	z-index: 4;
+
+	width: 630px;
+	min-height: 591px;
+	padding: 90px 150px 64px 125px;
+	background-image: url('cloud_03.png');
+}
+
+.explanation > h3 {
+	width: 330px;
 }
 
 .participation {
 	margin-left: 75px;
 	margin-top: 50px;
-	width: 750px;
 	z-index: 5;
+
+	width: 874px;
+	min-height: 536px;
+	padding: 110px 100px 60px 120px;
+	background-image: url('cloud_02.png');
+}
+
+.participation > h3 {
+	text-align: left;
+	text-indent: 130px;
 }
 
 .benefits {
 	margin-top: 75px;
-	margin-left: 150px;
+	margin-left: 100px;
 	width: 400px;
 	z-index: 6;
+
+	width: 430px;
+	min-height: 403px;
+	padding: 50px 90px 0 100px;
+	background-image: url('cloud_03.png');
+}
+
+.benefits > h3 {
+	text-align: left;
+	text-indent: 30px;
 }
 
 .requirements {
-	margin-left: 300px;
+	margin-left: 170px;
 	margin-top: -50px;
 
-	width: 700px;
+	width: 844px;
+	min-height: 744px;
+	padding: 150px 90px 57px 145px;
+	background-image: url('cloud_01.png');
+}
+
+.requirements > h3 {
+	text-indent: 50px;
 }
 
 footer {
 	position: fixed;
 	top: 0;
 	right: 0;
+	min-height: 75px;
+	min-width: 220px;
 
 	display: block;
 	box-sizing: border-box;
-	border-radius: 0 0 0 100%;
 	padding: 0.5em 0.5em 1.5em 2em;
 
-	background-color: white;
-
 	text-align: right;
+	z-index: 1000;
+
+	background-image: url('cloud_11.png');
+	background-position: bottom left;
+	background-size: 331px 144px;
+
+	opacity: 0.5;
+	-webkit-transition: 0.25s opacity ease-in-out;
+}
+
+footer:hover {
+	opacity: 1;
 }
 
 .sidebar ul {
@@ -170,8 +268,28 @@ footer {
 }
 
 .design-selection li {
-	margin: 1em;
 	display: inline-block;
+
+	width: 331px;
+	height: 144px;
+	text-align: center;
+
+	padding: 50px 20px 0 10px;
+	box-sizing: border-box;
+}
+
+.design-selection li:nth-child(odd) {
+	background-image: url('cloud_11.png');
+	margin-left: -100px;
+}
+
+.design-selection li:nth-child(even) {
+	background-image: url('cloud_12.png');
+	margin-left: -40px;
+}
+
+.design-selection li > a:last-child {
+	display: block;
 }
 
 .design-archives .archives,
@@ -179,14 +297,30 @@ footer {
 	display: none;
 }
 
-.design-archives .viewall {
-	width: 400px;
+.design-archives .viewall a {
+	display: block;
+	margin-top: -50px;
 	margin-left: auto;
 	margin-right: auto;
 
 	text-align: center;
 	font-size: 2em;
 	font-family: 'Lily Script One', cursive;
+
+	width: 300px;
+	height: 145px;
+	padding-top: 55px;
+	box-sizing: border-box;
+	background-image: url('cloud_08.png');
+
+	-webkit-transition-property: -webkit-transform, color;
+	-webkit-transition-duration: 0.5s;
+}
+
+.design-archives .viewall a:hover {
+	-webkit-transform: translateY(-2px);
+	-webkit-transition-duration: 0.1s;
+	text-decoration: none;
 }
 
 .zen-resources {
